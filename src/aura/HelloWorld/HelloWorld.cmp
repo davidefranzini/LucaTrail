@@ -1,0 +1,30 @@
+<!--
+ - Created by Cinzia on 06/10/2020.
+ -->
+
+
+<aura:component description= "description" implements="force:hasRecordId,flexipage:availableForAllPageTypes,force:appHostable" access="global" controller="HelloWorldCtr">
+    <!-- attributes -->
+    <aura:attribute name="greeting" type="String" default="World"/>
+    <aura:attribute name="listAcc" type="List"/>
+    <aura:attribute name="data" type="List"/>
+    <aura:attribute name="columns" type="List"/>
+    <!-- handlers-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <div class="slds-card">
+        <div class="slds-card__body slds-card__body_inner slds-p-top_medium">
+            Hello , {!v.greeting}
+            <lightning:input aura:id="myInput" type="text" value="{!v.greeting}"/>
+            <!-- <aura:iteration items="{!v.listAcc}" var="acc"> {!acc.Id}  {!acc.Name} <br/>
+            </aura:iteration> -->
+        </div>
+        <div style="height: 300px">
+            <lightning:datatable
+                keyField="id"
+                data="{!v.listAcc}"
+                columns="{!v.columns}"
+                hideCheckboxColumn="true"/>
+        </div>
+    </div>
+</aura:component>

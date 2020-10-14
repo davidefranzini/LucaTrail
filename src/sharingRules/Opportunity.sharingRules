@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Closed_Won</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Closed Won</label>
+        <sharedTo>
+            <role>Project_Managers</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type</field>
+            <operation>equals</operation>
+            <value>Existing Customer - Upgrade</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Field_to_Insiede</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Field to Insiede</label>
+        <sharedTo>
+            <role>Insade_Sales</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Field_Sales</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>
