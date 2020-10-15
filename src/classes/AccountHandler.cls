@@ -37,4 +37,7 @@ public with sharing class AccountHandler {
        System.debug('Ciao');
     }
 
+    public void methodProvaSecondo(){
+       System.debug('CiaoDue');
+    }
 }
