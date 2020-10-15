@@ -32,4 +32,16 @@ public with sharing class AccountHandler {
         }
         return account;
     }
+
+    public void methodProva(){
+       System.debug('Ciao');
+    }
+
+    public static void miMettoinMezzo(){
+        system.debug('niente');
+    }
+
+    public void methodProvaSecondo(){
+       System.debug('CiaoDue');
+    }
 }
