@@ -32,4 +32,8 @@ public with sharing class AccountHandler {
         }
         return account;
     }
+
+    public void insertNewAccountTest(){
+        Account a = new Account(Name = 'Test');
+    }
 }
